@@ -1,7 +1,10 @@
-.vscode
+*~
 .vscode
 /.cache
 /.gdbinit
 /.python-version
-/ChangeLog.spell-corrected
+/ChangeLog
+/ChangeLog-spell-corrected
+/ChangeLog.orig
+/ChangeLog.rej
 /Mathics3_Module_Base.egg-info
