@@ -11,7 +11,7 @@ The Mathics3 Module system is the mechanism for writing
 Mathics3 Packages in Python.
 """
 
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 readme = "README.rst"
 license = {text = "GPL"}
 keywords = ["Mathematica", "Wolfram", "Interpreter", "Shell", "Math", "CAS"]
@@ -23,7 +23,6 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

@@ -17,6 +17,7 @@ MATHICS3_MODULE_OPTION ?= --load-module pymathics.graph,pymathics.natlang
 
 .PHONY: \
    all \
+   clean \
    develop \
    dist \
    rmChangeLog \
@@ -34,7 +35,7 @@ develop-full-cython: mathics/data/op-tables.json mathics/data/operators.json
 	$(PIP) install -e .[dev,full,cython]
 
 
-#: Make distribution: wheels, eggs, tarball
+#: Make distribution: wheel and tarball
 dist:
 	./admin-tools/make-dist.sh
 
@@ -42,6 +43,12 @@ dist:
 install:
 	$(PIP) install -e .
 
+
+#: Clean up temporary files
+clean:
+	find . | grep -E '\.pyc' | xargs rm -rvf;
+	find . | grep -E '\.pyo' | xargs rm -rvf;
+	$(PYTHON) ./setup.py $@
 
 #: Remove ChangeLog
 rmChangeLog:
